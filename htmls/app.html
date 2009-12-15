@@ -1,0 +1,139 @@
+﻿<html>
+<head>
+    <title id="title"></title>
+    <script type="text/javascript" src="../lib/air/AIRAliases.js" />
+    <script type="text/javascript" src="../lib/jquery/jquery-1.3.2.min.js" />
+    <script type="text/javascript" src="../lib/utils.js" />
+	<script type="text/javascript" src="../lib/pusher.js" />
+    <script type="text/javascript" src="../lib/app.js" />
+    <link type="text/css" rel="stylesheet" id="ss" 
+          href="../themes/rensea/styles.css" />
+</head>
+<body onLoad="ada.init();">
+
+<div id="dvcontainer" class="main_background"></div>
+<div id="dvtitlebar"></div>
+<div id="dvthrobber"></div>
+
+<div id="dvmain">
+    <div id="dvtoggle"></div>
+    <div id="dvtimeline"></div>
+    <div id="dvbottomborder"></div>
+    <div id="dvupdatearea">
+        <textarea id="dvupdateinput" 
+         tabindex="1"
+         rows="5"
+         onkeypress="ada.onUpdateChange()"
+         onkeydown="ada.onUpdateChange()"
+         onkeyup="ada.onUpdateChange()"></textarea>
+        <span id="dvupdatecount">140</span>
+		<span id="sharebar">
+			<span>添加</span>
+			<button id="bnsharelink" class="btn2">链接</button>
+		</span>
+        <button id="bnupdatesend" tabindex="2" class="btn2">发送</button>
+    </div>
+    <div id="dvfilterurl">
+        <table cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+        <td width="60%">
+            <input type="text" id="infilter" title="筛选用户" />
+            <input type="text" id="inurl" title="分享链接" />
+			<input type="text" id="urltitle" title="分享的链接" />
+        </td>
+        <td width="1%">
+        	<div id="dvurl"></div>
+			<div id="dvurlcncl"></div>
+		</td>
+        </tr></table>
+    </div>
+    <div id="dvmenucontainer">
+        <div id="dvmenu"></div>
+        <div id="dvmainmenu" class="menu">
+            <div class="menuitem" id="mihome">朋友们</div>
+            <div class="menuitem" id="mirepl">提到我</div>
+			<div class="menuitem" id="mipblc">串门</div>
+            <div class="menuitem" id="mimsgs">悄悄话</div>
+            <hr />
+            <div class="menuitem" id="mirefresh">刷新</div>
+			<div class="menuitem" id="miontop">保持最前</div>
+			<hr />
+            <!--<div class="menuitem" id="miavatars">显示图片</div>-->
+            <div class="menuitem" id="mitheme">主题...</div>
+            <div class="menuitem" id="miabout">关于...</div>
+            <hr />
+            <div class="menuitem" id="misignout">登出</div>
+            <div class="menuitem" id="miexit">退出</div>
+			<!--<hr />
+            <div class="menuitem" id="minotify">notify</div>-->
+        </div>
+    </div>
+</div>
+
+<div id="dvtopborder"></div>
+
+<div id="dvlogin">
+    <span id="spq" class="screenname">Hi.</span>
+    <br />
+    <br />
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+    <td width="15%">用户名: </td><td>&nbsp;&nbsp;</td>
+    <td><input type="text" id="inusernm" /></td>
+    </tr>
+    <tr>
+    <td>密　码: </td><td></td>
+    <td><input type="password" id="inpasswd" /></td>
+    </tr>
+    <tr>
+    <td></td><td></td>
+    <td>
+        <table style="padding: 5px 0;"><tr>
+        <td><input type="checkbox" id="chkrememberme" /></td>
+        <td>记住我</td>
+        </tr></table>
+    </td>
+    </tr>
+    <tr>
+    <td></td><td></td>
+    <td><button id="bnsignin" class="btn">登录</button>
+	<a href="http://renjian.com/dd/reg?verify_code=PgzZG5QEGKbt39WyaDdJ" class="link">获取人间帐号</a></td>
+    </tr>
+    </table>
+</div>
+
+<div id="dvabout">
+    <img src="/icons/icon32.png" />
+    <br />
+	<b>renjian-deck</b> version
+    <span id="aboutversion"></span>
+    <br />
+    <a href="http://renjian.com/" class="link">http://renjian.com/</a>
+    <br />
+    <br />
+    请继续支持人间网和人间团队～
+    <br />
+    关注 @<a href="http://renjian.com/renjian" class="link">renjian</a> :)
+    <br />
+    <br />
+	<b>special thanks</b><br />
+	renjian-deck源于开源项目ada，<br />
+	@Arthraim承诺将发布所有的代码到github，<br />
+	敬请监督 :D
+	<br />
+	<br />
+    <button id="bnaboutok" class="btn">确定</button>
+</div>
+
+<div id="dvthememenu" class="menu">
+    <div id="dvthemelist"></div>
+    <button id="bnthemeok" class="btn">确定</button>
+</div>
+
+<div id="dvmessage"></div>
+
+<div id="dvexit"></div>
+<div id="dvmin"></div>
+<div id="dvgripper"></div>
+
+</body>
+</html>

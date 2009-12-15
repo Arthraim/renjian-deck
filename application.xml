@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/1.5.2">
+    <id>com.rensea.deck</id>
+    <version>0.6.1</version> 
+    <filename>renjian-deck</filename>
+	<name>renjian-deck</name>
+	<description>人间网的桌面客户端</description>
+    <copyright>人间网版权所有</copyright>
+	<!--<publisherID>73E18C11815DFBC88C8D16AA25B56EE3C83AC7FC.1</publisherID>-->
+    <customUpdateUI>false</customUpdateUI>
+    <initialWindow> 
+        <content>renjian.html</content>
+     	<visible>true</visible>
+	 	<systemChrome>none</systemChrome>
+		<transparent>true</transparent>
+	    <width>450</width>
+		<height>600</height>
+		<x>200</x>
+		<y>200</y>
+		<maximizable>true</maximizable>
+		<minimizable>true</minimizable>
+		<resizable>true</resizable>
+		<maxSize>1332 932</maxSize>
+		<minSize>200 300</minSize>
+	</initialWindow>
+    <icon>
+        <image16x16>/icons/icon16.png</image16x16>
+        <image32x32>/icons/icon32.png</image32x32>
+        <image48x48>/icons/icon48.png</image48x48>
+        <image128x128>/icons/icon128.png</image128x128>
+    </icon>
+</application>

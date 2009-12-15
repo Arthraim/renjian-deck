@@ -1,0 +1,453 @@
+/* ada */
+
+/* default font style */
+
+* {
+    font-family: tahoma, arial, helvetica, sans-serif;
+    font-size: 12px;
+    color: #000;
+}
+
+/* input style (username, password, filter, shorten url) */
+
+input[type="text"], input[type="password"] {
+    background: #f0f0f0;
+    padding: 1px 5px;
+    border: 0px;
+    outline: none;
+    -khtml-border-radius: 4px;
+}
+
+/* input field hint text color */
+
+.inputfaint { 
+    color: #999;
+}
+
+/* primary button type (sign in/ok/etc.) */
+
+.btn { 
+    color: #666;
+    background: #eee;
+    border: 2px solid #999;
+    padding: 0 2px 2px 2px;
+    -khtml-border-radius: 4px;
+}
+
+/* secondary button type (send/reply/dm button) */
+
+.btn2 { 
+    color: #37b;
+    background: #fff;
+    padding: 2px;
+    border: 0px;
+}
+.btn2:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    background: #fff;
+    border: 2px solid #ccc;
+    border-top: 0px;
+    padding: 0 2px 2px 2px;
+    cursor: default;
+    z-index: 1000;
+    display: none;
+    -khtml-user-select: none;
+    -khtml-border-bottom-left-radius: 4px;
+    -khtml-border-bottom-right-radius: 4px;
+}
+
+.menu hr {
+    background-color: #ddd;
+    border: 0;
+    height: 1px;
+}
+
+.menuitem {
+    color: #25b;
+    padding: 0px 10px;
+    line-height: 1.55em;
+    display: block;
+}
+
+.link{
+    color: #0B7ECE;
+    text-decoration: none;
+}
+
+.link:hover{
+	text-decoration: underline;
+}
+
+.screenname, .gender0 {
+    color: #666;
+    font-weight: bold;
+}
+
+.gender1{
+	color: #0B7ECE;
+	font-weight: bold;
+}
+
+.gender2{
+	color: #F65A94;
+	font-weight: bold;
+}
+
+.prettyDate {
+    color: #999;
+}
+
+.tweetpic {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 0 5px 0 0;
+    display: none;
+    -khtml-background-size: 24px 24px;
+}
+
+/* btncontainer holds the fav, rt, dm and reply buttons */
+
+.btncontainer {
+    position: absolute;
+    bottom: 4px;
+    right: 3px;
+    height: 14px;
+}
+
+.btnfav, .btnunfav {
+    float: right;
+    width: 14px;
+    height: 13px;
+    background: url(images/btnstargrey.png);
+    margin: 0px 0px 0px 3px;
+    display: none;
+}
+
+.btnunfav {
+    background: url(images/btnstaryellow.png);
+    display: block;
+}
+
+.btnrt, .btnreply, .btndm {
+    float: right;
+    display: none;
+    color: #999;
+    padding: 0px 2px 1px 3px;
+    margin: 0px 0px 0px 3px;
+    cursor: default;
+}
+
+/* each tweet in the timeline */
+
+.dvtweet {
+    position: relative;
+    padding: 5px;
+    margin: 0 3px;
+    border-bottom: 1px solid #D2DADA;
+	clear: both;
+}
+
+#dvexit:hover, #dvmin:hover, #dvmenu:hover, #dvtoggle:hover, #dvurl:hover,
+#dvurlcncl:hover,
+.btnreply:hover, .btndm:hover, .btnfav:hover, .btnunfav:hover, .btnrt:hover, 
+.menuitem:hover {
+    background-color: #eee !important;
+    -khtml-border-radius: 3px;
+}
+
+/* container for the whole app */
+
+#dvcontainer {
+    background: #fff;
+    position: fixed;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    -khtml-border-top-left-radius: 4px;
+    -khtml-border-top-right-radius: 4px;
+    -khtml-border-bottom-left-radius: 4px;
+}
+
+/* container for .dvtweet elements */
+
+#dvtimeline {
+    position: fixed;
+    top: 24px;
+    bottom: 26px;
+    left: 2px;
+    right: 2px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/* ada : username */
+
+#dvtitlebar {
+    color: #678100;
+    position: fixed;
+    top: 6px;
+    left: 6px;
+    font-weight: bold;
+    cursor: default;
+    white-space: nowrap;
+    -khtml-user-select: none;
+}
+
+/* error message popup */
+
+#dvmessage {
+    color: #c51;
+    background: #fff;
+    border: 2px solid #666;
+    position: fixed;
+    top: 30px;
+    left: 8px;
+    right: 8px;
+    padding: 5px;
+    font-weight: bold;
+    display: none;
+    -khtml-border-radius: 4px;
+}
+
+/* where you input your tweets */
+
+#dvupdateinput {
+    background: #f5f5ff;
+    border: 0px;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    outline: none;
+}
+
+/* counts characters */
+
+#dvupdatecount {
+    color: #666;
+    float: left;
+    margin: 2px 2px 2px 8px;
+    font-weight: bold;
+    cursor: default;
+    -khtml-user-select: none;
+}
+
+/* top and bottom border of timeline */
+
+#dvtopborder, #dvbottomborder {
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    left: 2px;
+    right: 2px;
+}
+#dvtopborder {
+    top: 24px;
+    opacity: 0.5;
+}
+#dvbottomborder {
+    bottom: 26px;
+}
+
+/* window resize gripper */
+
+#dvgripper {
+    position: fixed;
+    right: 2px;
+    bottom: 2px;
+    width: 13px;
+    height: 13px;
+    background: url(images/gripper.png);
+}
+
+#dvmain, #dvlogin, #dvabout {
+    display: none;
+}
+
+#dvlogin  {
+    position: fixed;
+    top: 37px;
+    left: 11px;
+    right: 11px;
+}
+
+#dvabout  {
+    position: fixed;
+    top: 40px;
+    left: 8px;
+    right: 8px;
+    text-align: center;
+}
+
+#inusernm, #inpasswd {
+    width: 100%;
+}
+
+#dvthrobber, #dvexit, #dvmin, #dvmenu{
+    position: fixed;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+	background-color: #fff !important;
+    -khtml-border-radius: 3px;	
+}
+
+#dvthrobber {
+    right: 63px;
+    background: url(images/loader.gif);
+    display: none;
+}
+
+#dvexit {
+    right: 4px;
+    background: url(images/btnx.png);
+}
+
+#dvmin {
+    right: 23px;
+    background: url(images/btnmin.png);
+}
+
+#dvmenu {
+    right: 42px;
+    background: url(images/btnmenu.png);
+}
+
+#dvmainmenu {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+}
+
+#dvtoggle {
+    position: fixed;
+    bottom: 6px;
+    right: 13px;
+    width: 16px;
+    height: 16px;
+    background: url(images/btnbubble.png);
+}
+
+#dvupdatearea {
+    position: fixed;
+    margin: 0px;
+    padding: 1px 0 0 0;
+    bottom: 26px;
+    left: 2px;
+    right: 2px;
+    display: none;
+}
+
+#bnupdatesend {
+    float: right;
+    margin-right: 6px;
+}
+
+#dvfilterurl {
+    position: fixed;
+    bottom: 4px;
+    left: 5px;
+    width: 120px;
+}
+
+/*
+#infilter, #inurl, #urltitle {
+    width: 100%;
+}
+*/
+
+#inurl {
+    display: none;
+}
+
+#dvurl {
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+    background: url(images/btnplus.png);
+    display: none;
+}
+
+#urltitle {
+    display: none;
+}
+
+#dvurlcncl {
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+    background: url(images/btnx.png);
+    display: none;
+}
+
+#dvthememenu {
+    position: fixed;
+    top: 24px;
+    left: 8px;
+}
+
+#bnthemeok {
+    margin: 5px 10px;
+}
+
+#sharebar {
+	margin-left: 10px;
+}
+
+/**************************/
+div{
+	display:block;	
+}
+.fl{
+	float:left;
+}
+.fr{
+	float:right;
+}
+.clear{
+	clear:both;
+	visibility:hidden;
+}
+.t_status{
+	width: 100%;
+}
+.s_south{
+	clear: both;
+}
+.thumb{
+	margin-top: 6px;
+	margin-right: 6px;
+}
+.marginleft{
+	margin-left: 35px;
+}
+#dvtimeline div{
+	cursor:pointer;
+}
+.dvtweet:hover{
+	background: #FFFAE5;
+}
+/*notify window*/
+#notify{
+	background: #000000;
+	-khtml-border-top-left-radius: 4px;
+    -khtml-border-bottom-left-radius: 4px;
+	opacity: 0.8; 
+	width: 100%;
+	padding-bottom: 5px;
+}
+#captain{
+	color: #fff;
+	padding-top: 5px;
+	padding-left: 10px;
+	font-size: 14px;
+}
+#content{
+	color: #f0f0f0;
+	margin-left: 10px;
+}
+

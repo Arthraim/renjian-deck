@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<update xmlns="http://ns.adobe.com/air/framework/update/description/1.0">
+	<version>0.6.1</version> 
+	<url>http://arthraim.cn/renjian-deck.air</url> 
+	<description>+ 添加新功能“保持最前”，各个窗口都可以单独设置。(@路人甲)
+ > 对话窗口使用了会话相关API新增的since_id参数，修改了对话的推送更新逻辑，现在更快了
+ > 对话窗口的链接补上了'/'，不会出现原来的Url拼接错误了 (@caoxg)
+ > MP3的链接不再显示null，直接显示mp3地址
+ > 限定了窗口的最小窗口保持为300×500，主要为了保证良好的体验，有意见请留言</description> 
+</update>
