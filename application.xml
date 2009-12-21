@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/1.5.2">
+<application xmlns="http://ns.adobe.com/air/application/1.5">
     <id>com.rensea.deck</id>
-    <version>0.6.1</version> 
+    <version>0.7.0</version> 
     <filename>renjian-deck</filename>
 	<name>renjian-deck</name>
 	<description>人间网的桌面客户端</description>

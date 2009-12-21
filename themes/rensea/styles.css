@@ -122,23 +122,44 @@ input[type="text"], input[type="password"] {
     float: right;
     width: 14px;
     height: 13px;
-    background: url(images/btnstargrey.png);
+    background: url(images/btndinggrey.gif);
     margin: 0px 0px 0px 3px;
     display: none;
 }
 
 .btnunfav {
-    background: url(images/btnstaryellow.png);
+    background: url(images/btndingyellow.gif);
     display: block;
 }
 
-.btnrt, .btnreply, .btndm {
+.btnrt, .btndm {
     float: right;
     display: none;
     color: #999;
     padding: 0px 2px 1px 3px;
     margin: 0px 0px 0px 3px;
     cursor: default;
+}
+
+.btnfav:hover, .btnunfav:hover {
+    background: url(images/btndingyellow.gif);
+    background-color: #eee !important;
+    -khtml-border-radius: 3px;
+}
+
+.btnreply {
+	float: right;
+    width: 35px;
+    height: 13px;
+	background: url(images/btnreply.gif);
+    margin: 0px 0px 0px 3px;
+    display: none;
+}
+
+.btnreply:hover {
+	background: url(images/btnreplyhover.gif);
+	background-color: #eee !important;
+    -khtml-border-radius: 3px;
 }
 
 /* each tweet in the timeline */
@@ -153,7 +174,7 @@ input[type="text"], input[type="password"] {
 
 #dvexit:hover, #dvmin:hover, #dvmenu:hover, #dvtoggle:hover, #dvurl:hover,
 #dvurlcncl:hover,
-.btnreply:hover, .btndm:hover, .btnfav:hover, .btnunfav:hover, .btnrt:hover, 
+.btndm:hover, .btnrt:hover, 
 .menuitem:hover {
     background-color: #eee !important;
     -khtml-border-radius: 3px;
@@ -435,7 +456,9 @@ div{
 #notify{
 	background: #000000;
 	-khtml-border-top-left-radius: 4px;
+	-khtml-border-top-right-radius: 4px;
     -khtml-border-bottom-left-radius: 4px;
+    -khtml-border-bottom-right-radius: 4px;
 	opacity: 0.8; 
 	width: 100%;
 	padding-bottom: 5px;
@@ -450,4 +473,16 @@ div{
 	color: #f0f0f0;
 	margin-left: 10px;
 }
-
+/*favoriters*/
+.fvrters{
+	margin-top: 3px;
+}
+.fvrters a{
+	font-size: 11px;
+	text-decoration: none;
+	color: #999;
+	margin-left: 4px;
+}
+.fvrters a:hover{
+    text-decoration: underline;
+}

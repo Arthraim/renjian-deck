@@ -122,13 +122,28 @@ input[type="text"], input[type="password"] {
     display: block;
 }
 
-.btnrt, .btnreply, .btndm {
+.btnrt, .btndm {
     float: right;
     display: none;
     color: #999;
     padding: 0px 2px 1px 3px;
     margin: 0px 0px 0px 3px;
     cursor: default;
+}
+
+.btnreply {
+    float: right;
+    width: 35px;
+    height: 13px;
+    background: url(images/btnreply.gif);
+    margin: 0px 0px 0px 3px;
+    display: none;
+}
+
+.btnreply:hover {
+    background: url(images/btnreplyhover.gif);
+    background-color: #eee !important;
+    -khtml-border-radius: 3px;
 }
 
 /* each tweet in the timeline */
@@ -267,7 +282,7 @@ input[type="text"], input[type="password"] {
     top: 5px;
     width: 16px;
     height: 16px;
-	background-color: #e6e6e6 !important;
+	background-color: #fff !important;
     -khtml-border-radius: 3px;	
 }
 
@@ -409,7 +424,9 @@ div{
 #notify{
 	background: #000000;
 	-khtml-border-top-left-radius: 4px;
+	-khtml-border-top-right-radius: 4px;
     -khtml-border-bottom-left-radius: 4px;
+    -khtml-border-bottom-right-radius: 4px;
 	opacity: 0.8; 
 	width: 100%;
 	padding-bottom: 5px;
@@ -424,4 +441,16 @@ div{
 	color: #f0f0f0;
 	margin-left: 10px;
 }
-
+/*favoriters*/
+.fvrters{
+    margin-top: 3px;
+}
+.fvrters a{
+    font-size: 11px;
+    text-decoration: none;
+    color: #999;
+    margin-left: 4px;
+}
+.fvrters a:hover{
+    text-decoration: underline;
+}
