@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/1.5">
+<application xmlns="http://ns.adobe.com/air/application/1.5.3">
     <id>com.rensea.deck</id>
-    <version>0.7.0</version> 
+    <version>0.8.0</version> 
     <filename>renjian-deck</filename>
 	<name>renjian-deck</name>
 	<description>人间网的桌面客户端</description>
     <copyright>人间网版权所有</copyright>
 	<!--<publisherID>73E18C11815DFBC88C8D16AA25B56EE3C83AC7FC.1</publisherID>-->
+	<publisherID>AEF22A672C57714A53AA58A25FFB23AD78A7B521.1</publisherID>
     <customUpdateUI>false</customUpdateUI>
     <initialWindow> 
         <content>renjian.html</content>

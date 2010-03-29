@@ -62,12 +62,12 @@ input[type="text"], input[type="password"] {
     display: block;
 }
 
-.link {
+.link, .user_link {
     color: #2a5db0;
     text-decoration: none;
 }
 
-.link:hover{
+.link:hover, .user_link:hover {
 	text-decoration: underline;
 }
 
@@ -252,6 +252,7 @@ input[type="text"], input[type="password"] {
     width: 13px;
     height: 13px;
     background: url(images/gripper.png);
+	cursor: se-resize;
 }
 
 #dvmain, #dvlogin, #dvabout {
@@ -267,9 +268,9 @@ input[type="text"], input[type="password"] {
 
 #dvabout  {
     position: fixed;
-    top: 40px;
+    top: 24px;
     left: 8px;
-    right: 8px;
+    right: 23px;
     text-align: center;
 }
 
@@ -453,4 +454,31 @@ div{
 }
 .fvrters a:hover{
     text-decoration: underline;
+}
+/*user windows*/
+.dvuser {
+    overflow: hidden;
+    padding: 5px;
+    margin: 3px;
+    padding-left: 86px;
+    background: #fff;
+    -khtml-border-radius: 4px;
+    clear: both;
+}
+.dvuserpic {
+    width: 72px;
+    height: 72px;
+    margin: 0 5px 0 0;
+    left: 5px;
+    top: 5px;
+}
+.relative { position: relative;}
+.absolute { position: absolute;}
+/*pref menu*/
+#dvprefmenu {
+	border: 2px solid #ccc;
+    position: fixed;
+    top: 178px;
+    right: 90px;
+    -khtml-border-top-left-radius: 4px;
 }

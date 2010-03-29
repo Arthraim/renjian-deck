@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <update xmlns="http://ns.adobe.com/air/framework/update/description/1.0">
-	<version>0.7.0</version> 
-	<url>http://arthraim.cn/renjian-deck.air</url> 
-	<description>+ 添加了“我顶”频道，可以看到自己以前顶过的发言了~
- + 添加“显示输入”或“隐藏输入”的选项，可以设置输入框是否一直显示。主窗口和对话窗口依然可以分开设置。
- + 采用了网站上的“回应”和“顶”图标（的微缩版，另外其他几个主题显得比较突兀，有待改进~ 欢迎投稿 -_,-）
- + 现在被顶的帖子上也会显示同学们的名字了。界面限制，只显示3个。
- + 在timeline中提到我的消息会有“@我”的标志了。
- + 本项目已经开源，在about界面加上了开源信息。
- > 修复了发送链接之后，后面所有的发言都会带上这个链接的bug。(@netpiano)
- > 修改了时间的计算，使用服务器推送的时间作为当前时间，而不再从本地取了，防止两端时间存在误差。(@niedhui @netpiano)
- > 修改了推送的逻辑，推送消息多、会话窗口打开的多的时候的算法时间复杂度大大降低了。
+	<version>0.8.0</version> 
+	<url>http://deck.renjian.me/renjian-deck.air</url> 
+	<description>version 0.8.0 (2010-03-29)
+ + 添加了用户信息以及发言timeline的窗口。
+ + 添加了开机是否启动的选项，可以在登录OS的时候自动打开人间浮云。
+ + 对话窗口双击标题可以直接关闭。
+ > 对话窗口的标题文字限制字数，防止和按钮的交错。
+ > 系统托盘图标右键菜单中文化。
+ > 菜单中偏好选项归类的二级菜单内
+ > “获取人间帐号”打开新窗口打开。
 </description> 
 </update>
