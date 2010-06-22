@@ -1,41 +1,44 @@
+/* pinky */
+
 * {
     font-family: tahoma, arial, helvetica, sans-serif;
     font-size: 12px;
-    color: #ccc;
+    color: #000;
 }
 
 input[type="text"], input[type="password"] {
-    background: #222;
+    background: #fff;
     padding: 1px 5px;
     border: 0px;
     outline: none;
     -khtml-border-radius: 4px;
 }
 
-.inputfaint { /* input field hint text color */
-    color: #999;
+.inputfaint { /* input field hints text color */
+    color: #f89;
 }
 
 .btn { /* primary button type */
-    background: #333;
-    border: 2px solid #939393;
+    color: #ff6669;
+    background: #fff6f9;
+    border: 2px solid #ffb9bc;
     padding: 0 2px 2px 2px;
     -khtml-border-radius: 4px;
 }
-
 .btn2 { /* secondary button type (send/reply/dm button) */
+    background: #fff6f9;
     color: #37b;
-    background: #111;
     padding: 2px;
     border: 0px;
 }
+
 .btn2:hover {
     text-decoration: underline;
 }
 
 .menu {
-    background: #111;
-    border: 2px solid #333;
+    background: #fff6f9;
+    border: 2px solid #ffb9bc;
     border-top: 0px;
     padding: 0 2px 2px 2px;
     cursor: default;
@@ -47,22 +50,32 @@ input[type="text"], input[type="password"] {
 }
 
 .menu hr {
-    background-color: #111;
+    background-color: #ffb9bc;
     border: 0;
-    height: 0px;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #171717;
+    height: 1px;
 }
 
 .menuitem {
-    color: #d5a24f;
+    color: #ee4649;
     padding: 0px 10px;
     line-height: 1.55em;
     display: block;
 }
 
-.link, .user_link {
-    color: #bc985d;
+.dvtweet {
+    background: #fff6f9;
+    position: relative;
+    padding: 5px;
+    margin: 3px;
+    border: 1px solid #ffd3d6;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ffd0d3;
+    -khtml-border-radius: 6px;
+	clear: both;
+}
+
+.link, .user_link  {
+    color: #2a5db0;
     text-decoration: none;
 }
 
@@ -71,7 +84,7 @@ input[type="text"], input[type="password"] {
 }
 
 .screenname, .gender0 {
-    color: #666;
+    color: #ee4649;
     font-weight: bold;
 }
 
@@ -86,7 +99,7 @@ input[type="text"], input[type="password"] {
 }
 
 .prettyDate {
-    color: #777;
+    color: #f89;
 }
 
 .tweetpic {
@@ -124,7 +137,7 @@ input[type="text"], input[type="password"] {
 .btnrt, .btndm {
     float: right;
     display: none;
-    color: #999;
+    color: #f89;
     padding: 0px 2px 1px 3px;
     margin: 0px 0px 0px 3px;
     cursor: default;
@@ -145,39 +158,28 @@ input[type="text"], input[type="password"] {
     -khtml-border-radius: 3px;
 }
 
-/* each tweet in the timeline */
-
-.dvtweet {
-    position: relative;
-    padding: 5px;
-    margin: 0px 3px;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #111;
-	clear: both;
-}
-
 #dvexit:hover, #dvmin:hover, #dvmenu:hover, #dvtoggle:hover, #dvurl:hover,
 #dvurlcncl:hover,
 .btnreply:hover, .btndm:hover, .btnfav:hover, .btnunfav:hover, .btnrt:hover,
 .menuitem:hover {
-    background-color: #333 !important;
-    -khtml-border-radius: 2px;
+    background-color: #ffdcdf !important;
+    -khtml-border-radius: 3px;
 }
 
 #dvcontainer {
-    background: #111;
-    position: fixed;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    -khtml-border-top-left-radius: 6px;
-    -khtml-border-top-right-radius: 6px;
-    -khtml-border-bottom-left-radius: 6px;
+  background: #fff6f9;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  -khtml-border-top-left-radius: 4px;
+  -khtml-border-top-right-radius: 4px;
+  -khtml-border-bottom-left-radius: 4px;
 }
 
 #dvtimeline {
-    background: #171717;
+    background: #ffe9ec;
     position: fixed;
     top: 24px;
     bottom: 26px;
@@ -188,10 +190,10 @@ input[type="text"], input[type="password"] {
 }
 
 #dvtitlebar {
+    color: #ff6669;
     position: fixed;
     top: 6px;
     left: 6px;
-    color: #f90;
     font-weight: bold;
     cursor: default;
     white-space: nowrap;
@@ -199,9 +201,9 @@ input[type="text"], input[type="password"] {
 }
 
 #dvmessage {
-    background: #000;
-    color: #49c;
-    border: 2px solid #666;
+    color: #ff6669;
+    background: #fff;
+    border: 2px solid #ffb9bc;
     position: fixed;
     top: 30px;
     left: 8px;
@@ -213,18 +215,18 @@ input[type="text"], input[type="password"] {
 }
 
 #dvupdateinput {
+    background: #fff;
     margin: 0px;
     padding: 0px;
     width: 100%;
-    background: #333;
     border: 0px;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #ffb9bc;
     outline: none;
 }
 
 #dvupdatecount {
+    color: #ff6669;
     float: left;
-    color: #666;
     margin: 2px 2px 2px 8px;
     font-weight: bold;
     cursor: default;
@@ -232,10 +234,10 @@ input[type="text"], input[type="password"] {
 }
 
 #dvtopborder, #dvbottomborder {
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid #ffb9bc;
     position: fixed;
     left: 2px;
-    right: 2px; 
+    right: 2px;
 }
 #dvtopborder {
     top: 24px;
@@ -282,8 +284,8 @@ input[type="text"], input[type="password"] {
     top: 5px;
     width: 16px;
     height: 16px;
-	background-color: #111 !important;
-    -khtml-border-radius: 3px;
+	background-color: #fff6f9 !important;
+    -khtml-border-radius: 3px;	
 }
 
 #dvthrobber {
@@ -383,6 +385,7 @@ input[type="text"], input[type="password"] {
     margin: 5px 10px;
 }
 
+
 #sharebar {
 	margin-left: 10px;
 }
@@ -418,7 +421,7 @@ div{
 	cursor:pointer;
 }
 .dvtweet:hover{
-	background: #000000;
+	background: #FFFAE5;
 }
 /*notify window*/
 #notify{
@@ -458,11 +461,13 @@ div{
 .dvuser {
     overflow: hidden;
     padding: 5px;
-    margin: 0 3px;
-    border-bottom: 1px solid #111;
-    border-top: 1px solid #222;
     padding-left: 86px;
-    background: #171717;
+	background: #fff6f9;
+    margin: 3px;
+    border: 1px solid #ffd3d6;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #ffd0d3;
+    -khtml-border-radius: 6px;
     clear: both;
 }
 .dvuserpic {
@@ -476,7 +481,7 @@ div{
 .absolute { position: absolute;}
 /*pref menu*/
 #dvprefmenu {
-    border: 2px solid #333;
+	border: 2px solid #ffb9bc;
     position: fixed;
     top: 178px;
     right: 90px;

@@ -1,31 +1,44 @@
+/* ada */
+
+/* default font style */
+
 * {
     font-family: tahoma, arial, helvetica, sans-serif;
     font-size: 12px;
-    color: #ccc;
+    color: #000;
 }
 
+/* input style (username, password, filter, shorten url) */
+
 input[type="text"], input[type="password"] {
-    background: #222;
+    background: #f0f0f0;
     padding: 1px 5px;
     border: 0px;
     outline: none;
     -khtml-border-radius: 4px;
 }
 
-.inputfaint { /* input field hint text color */
+/* input field hint text color */
+
+.inputfaint { 
     color: #999;
 }
 
-.btn { /* primary button type */
-    background: #333;
-    border: 2px solid #939393;
+/* primary button type (sign in/ok/etc.) */
+
+.btn { 
+    color: #666;
+    background: #eee;
+    border: 2px solid #999;
     padding: 0 2px 2px 2px;
     -khtml-border-radius: 4px;
 }
 
-.btn2 { /* secondary button type (send/reply/dm button) */
+/* secondary button type (send/reply/dm button) */
+
+.btn2 { 
     color: #37b;
-    background: #111;
+    background: #fff;
     padding: 2px;
     border: 0px;
 }
@@ -34,8 +47,8 @@ input[type="text"], input[type="password"] {
 }
 
 .menu {
-    background: #111;
-    border: 2px solid #333;
+    background: #fff;
+    border: 2px solid #ccc;
     border-top: 0px;
     padding: 0 2px 2px 2px;
     cursor: default;
@@ -47,22 +60,20 @@ input[type="text"], input[type="password"] {
 }
 
 .menu hr {
-    background-color: #111;
+    background-color: #ddd;
     border: 0;
-    height: 0px;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #171717;
+    height: 1px;
 }
 
 .menuitem {
-    color: #d5a24f;
+    color: #25b;
     padding: 0px 10px;
     line-height: 1.55em;
     display: block;
 }
 
 .link, .user_link {
-    color: #bc985d;
+    color: #0B7ECE;
     text-decoration: none;
 }
 
@@ -86,7 +97,7 @@ input[type="text"], input[type="password"] {
 }
 
 .prettyDate {
-    color: #777;
+    color: #999;
 }
 
 .tweetpic {
@@ -111,13 +122,13 @@ input[type="text"], input[type="password"] {
     float: right;
     width: 14px;
     height: 13px;
-    background: url(images/btnstargrey.png);
+    background: url(images/btndinggrey.gif);
     margin: 0px 0px 0px 3px;
     display: none;
 }
 
 .btnunfav {
-    background: url(images/btnstaryellow.png);
+    background: url(images/btndingyellow.gif);
     display: block;
 }
 
@@ -130,18 +141,24 @@ input[type="text"], input[type="password"] {
     cursor: default;
 }
 
+.btnfav:hover, .btnunfav:hover {
+    background: url(images/btndingyellow.gif);
+    background-color: #eee !important;
+    -khtml-border-radius: 3px;
+}
+
 .btnreply {
-    float: right;
+	float: right;
     width: 35px;
     height: 13px;
-    background: url(images/btnreply.gif);
+	background: url(images/btnreply.gif);
     margin: 0px 0px 0px 3px;
     display: none;
 }
 
 .btnreply:hover {
-    background: url(images/btnreplyhover.gif);
-    background-color: #eee !important;
+	background: url(images/btnreplyhover.gif);
+	background-color: #eee !important;
     -khtml-border-radius: 3px;
 }
 
@@ -150,34 +167,36 @@ input[type="text"], input[type="password"] {
 .dvtweet {
     position: relative;
     padding: 5px;
-    margin: 0px 3px;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #111;
+    margin: 0 3px;
+    border-bottom: 1px solid #D2DADA;
 	clear: both;
 }
 
 #dvexit:hover, #dvmin:hover, #dvmenu:hover, #dvtoggle:hover, #dvurl:hover,
 #dvurlcncl:hover,
-.btnreply:hover, .btndm:hover, .btnfav:hover, .btnunfav:hover, .btnrt:hover,
+.btndm:hover, .btnrt:hover, 
 .menuitem:hover {
-    background-color: #333 !important;
-    -khtml-border-radius: 2px;
+    background-color: #eee !important;
+    -khtml-border-radius: 3px;
 }
 
+/* container for the whole app */
+
 #dvcontainer {
-    background: #111;
+    background: #fff;
     position: fixed;
     top: 2px;
     left: 2px;
     right: 2px;
     bottom: 2px;
-    -khtml-border-top-left-radius: 6px;
-    -khtml-border-top-right-radius: 6px;
-    -khtml-border-bottom-left-radius: 6px;
+    -khtml-border-top-left-radius: 4px;
+    -khtml-border-top-right-radius: 4px;
+    -khtml-border-bottom-left-radius: 4px;
 }
 
+/* container for .dvtweet elements */
+
 #dvtimeline {
-    background: #171717;
     position: fixed;
     top: 24px;
     bottom: 26px;
@@ -187,20 +206,24 @@ input[type="text"], input[type="password"] {
     overflow-x: hidden;
 }
 
+/* ada : username */
+
 #dvtitlebar {
+    color: #678100;
     position: fixed;
     top: 6px;
     left: 6px;
-    color: #f90;
     font-weight: bold;
     cursor: default;
     white-space: nowrap;
     -khtml-user-select: none;
 }
 
+/* error message popup */
+
 #dvmessage {
-    background: #000;
-    color: #49c;
+    color: #c51;
+    background: #fff;
     border: 2px solid #666;
     position: fixed;
     top: 30px;
@@ -212,46 +235,55 @@ input[type="text"], input[type="password"] {
     -khtml-border-radius: 4px;
 }
 
+/* where you input your tweets */
+
 #dvupdateinput {
+    background: #f5f5ff;
+    border: 0px;
+    border-bottom: 1px solid #ddd;
     margin: 0px;
     padding: 0px;
     width: 100%;
-    background: #333;
-    border: 0px;
-    border-bottom: 1px solid #000;
     outline: none;
 }
 
+/* counts characters */
+
 #dvupdatecount {
-    float: left;
     color: #666;
+    float: left;
     margin: 2px 2px 2px 8px;
     font-weight: bold;
     cursor: default;
     -khtml-user-select: none;
 }
 
+/* top and bottom border of timeline */
+
 #dvtopborder, #dvbottomborder {
-    border-bottom: 1px solid #111;
+    border-bottom: 1px solid #ccc;
     position: fixed;
     left: 2px;
-    right: 2px; 
+    right: 2px;
 }
 #dvtopborder {
     top: 24px;
+    opacity: 0.5;
 }
 #dvbottomborder {
     bottom: 26px;
 }
 
+/* window resize gripper */
+
 #dvgripper {
+	cursor: se-resize;
     position: fixed;
     right: 2px;
     bottom: 2px;
     width: 13px;
     height: 13px;
     background: url(images/gripper.png);
-	cursor: se-resize;
 }
 
 #dvmain, #dvlogin, #dvabout {
@@ -269,8 +301,10 @@ input[type="text"], input[type="password"] {
     position: fixed;
     top: 24px;
     left: 8px;
-    right: 23px;
+	right: 23px;
     text-align: center;
+	/*width: 250px;
+	height: 250px;*/
 }
 
 #inusernm, #inpasswd {
@@ -282,8 +316,8 @@ input[type="text"], input[type="password"] {
     top: 5px;
     width: 16px;
     height: 16px;
-	background-color: #111 !important;
-    -khtml-border-radius: 3px;
+	background-color: #fff !important;
+    -khtml-border-radius: 3px;	
 }
 
 #dvthrobber {
@@ -343,8 +377,9 @@ input[type="text"], input[type="password"] {
     left: 5px;
     width: 120px;
 }
+
 /*
-#infilter, #inurl {
+#infilter, #inurl, #urltitle {
     width: 100%;
 }
 */
@@ -418,7 +453,7 @@ div{
 	cursor:pointer;
 }
 .dvtweet:hover{
-	background: #000000;
+	background: #FFFAE5;
 }
 /*notify window*/
 #notify{
@@ -443,42 +478,40 @@ div{
 }
 /*favoriters*/
 .fvrters{
-    margin-top: 3px;
+	margin-top: 3px;
 }
 .fvrters a{
-    font-size: 11px;
-    text-decoration: none;
-    color: #999;
-    margin-left: 4px;
+	font-size: 11px;
+	text-decoration: none;
+	color: #999;
+	margin-left: 4px;
 }
 .fvrters a:hover{
     text-decoration: underline;
 }
 /*user windows*/
 .dvuser {
-    overflow: hidden;
+	overflow: hidden;
     padding: 5px;
     margin: 0 3px;
-    border-bottom: 1px solid #111;
-    border-top: 1px solid #222;
-    padding-left: 86px;
-    background: #171717;
-    clear: both;
+    border-bottom: 2px solid #D2DADA;
+	padding-left: 86px;
+	background: #F6FBFF;
 }
 .dvuserpic {
     width: 72px;
     height: 72px;
     margin: 0 5px 0 0;
-    left: 5px;
-    top: 5px;
+	left: 5px;
+	top: 5px;
 }
 .relative { position: relative;}
 .absolute { position: absolute;}
 /*pref menu*/
 #dvprefmenu {
-    border: 2px solid #333;
-    position: fixed;
+	border: 2px solid #ccc;
+	position: fixed;
     top: 178px;
     right: 90px;
-    -khtml-border-top-left-radius: 4px;
+	-khtml-border-top-left-radius: 4px;
 }
