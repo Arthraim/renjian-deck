@@ -2,7 +2,7 @@
 <update xmlns="http://ns.adobe.com/air/framework/update/description/1.0">
 	<version>0.8.1</version> 
 	<url>http://deck.renjian.me/renjian-deck.air</url> 
-	<description>version 0.8.1 (2010-06-23)
+	<description>version 0.8.1 (2010-06-30)
  + 添加人间网新任务的相关支持
  > 发送消息现在支持换行了，新版本使用‘Ctrl+回车’发送消息
  > 采用了新的对话链接，renjian.com/c/xxxxx
